@@ -2,6 +2,8 @@
 
 We will release the source code soon
 
+# Evaluation on Scene Flow and KITTI
+
 | Method | Scene Flow <br> (EPE) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-all) | Runtime (ms) |
 |---|---|---|---|---|
 | Fast-ACVNet+ | 0.59 | 1.85 % | 2.01 % | 45 |
@@ -12,3 +14,11 @@ We will release the source code soon
 | DeepPrunerFast | 0.97 | - | 2.59 % | 50 |
 
 Our Fast-ACVNet+ outperforms all the published real-time methods on Scene Flow, KITTI 2012 and KITTI 2015
+
+# Qualitative results on Scene Flow.
+
+![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/sceneflow.png)
+
+# Generalization performance on the Middlebury 2014 dataset. All the comparison methods are only trained on Scene Flow.
+
+![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/middlebury.png)
