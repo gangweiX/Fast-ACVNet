@@ -17,8 +17,12 @@ Our Fast-ACVNet+ outperforms all the published real-time methods on Scene Flow, 
 
 # Qualitative results on Scene Flow.
 
-![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/sceneflow.png)
+![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/sceneflow.png)
+
+# Qualitative results on KITTI.
+
+![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/kitti.png)
 
 # Generalization performance on the Middlebury 2014 dataset. All the comparison methods are only trained on Scene Flow.
 
-![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/middlebury.png)
+![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/middlebury.png)
