@@ -5,7 +5,7 @@ We will release the source code soon
 # Demo on KITTI raw data
 
 <p align="center">
-  <img width="844" height="446" src="./demo/kittiraw_demo.gif" data-zoomable>
+  <img width="666" height="333" src="./demo/kittiraw_demo.gif" data-zoomable>
 </p>
 
 # Evaluation on Scene Flow and KITTI
