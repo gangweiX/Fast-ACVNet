@@ -2,6 +2,12 @@
 
 We will release the source code soon
 
+# Demo on KITTI raw data
+
+<p align="center">
+  <img width="422" height="223" src="./demo/kittiraw_demo.gif" data-zoomable>
+</p>
+
 # Evaluation on Scene Flow and KITTI
 
 | Method | Scene Flow <br> (EPE) | KITTI 2012 <br> (3-all) | KITTI 2015 <br> (D1-all) | Runtime (ms) |
