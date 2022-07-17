@@ -1,7 +1,7 @@
 # Fast-ACVNet
 
 We will release the source code soon
-[//]: aaabbb
+[//]: (aaabbb)
 
 # Demo on KITTI raw data
 
