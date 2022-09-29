@@ -1,5 +1,7 @@
 # Fast-ACVNet
 
+Paper:[[arxiv]](https://arxiv.org/pdf/2209.12699.pdf)
+
 We will release the source code soon
 
 # Demo on KITTI raw data
