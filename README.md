@@ -25,6 +25,10 @@ A demo result on our RTX 3090 (Ubuntu 20.04).
 
 Our Fast-ACVNet+ outperforms all the published real-time methods on Scene Flow, KITTI 2012 and KITTI 2015
 
+### Pretrained Model
+
+[Scene Flow](https://drive.google.com/drive/folders/1lcyzoKlkYoDL3tiPGCR6nob9WsusaTI8?usp=share_link)
+
 # Qualitative results on Scene Flow.
 
 ![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/sceneflow.png)
