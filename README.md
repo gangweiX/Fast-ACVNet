@@ -2,6 +2,8 @@
 
 Paper:[[arxiv]](https://arxiv.org/pdf/2209.12699.pdf)
 
+Part of the code has alredy been uploaded.
+
 # Demo on KITTI raw data
 
 A demo result on our RTX 3090 (Ubuntu 20.04).
