@@ -27,7 +27,7 @@ Our Fast-ACVNet+ outperforms all the published real-time methods on Scene Flow, 
 
 ### Pretrained Model
 
-[Scene Flow](https://drive.google.com/drive/folders/1lcyzoKlkYoDL3tiPGCR6nob9WsusaTI8?usp=share_link)
+[Scene Flow](https://drive.google.com/file/d/1FWr4QCDe0e325OOviorvZ7lpORmnqTUM/view?usp=share_link) [KITTI 2012](https://drive.google.com/file/d/1Cq_TQpuT0JF6-jq8DUjLvF0qQqxTZkJ-/view?usp=share_link) [KITTI 2015](https://drive.google.com/file/d/17X5hUzRWpxbHdlMDiIAJyG-VByCH59Sz/view?usp=share_link) [Generalization](https://drive.google.com/file/d/1VUJR11tVgYiLpUsDYET6NCTgU1QGWtn7/view?usp=share_link) 
 
 # Qualitative results on Scene Flow.
 
