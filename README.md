@@ -2,7 +2,7 @@
 
 Paper:[[arxiv]](https://arxiv.org/pdf/2209.12699.pdf)
 
-Part of the code has alredy been uploaded.
+Part of the code has already been uploaded.
 
 # Demo on KITTI raw data
 
