@@ -1,6 +1,3 @@
-# Fast-ACVNet
-This is the implementation of the paper: [Accurate and Efficient Stereo Matching via Attention Concatenation Volume](https://arxiv.org/pdf/2209.12699.pdf), Gangwei Xu, Yun Wang, Junda Cheng, Jinhui Tang, Xin Yang
-
 <p align="center">
   <h1 align="center">Accurate and Efficient Stereo Matching via Attention Concatenation Volume</h1>
   <p align="center">
