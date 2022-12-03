@@ -11,7 +11,7 @@ This is the implementation of the paper: [Accurate and Efficient Stereo Matching
 </p>
 <p align="center">
   <a href="">
-    <img src="[https://haofeixu.github.io/unimatch/resources/teaser.svg](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png)" alt="Logo" width="70%">
+    <img src="https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png" alt="Logo" width="70%">
   </a>
 </p>
 
