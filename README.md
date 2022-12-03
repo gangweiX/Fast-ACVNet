@@ -6,12 +6,12 @@ This is the implementation of the paper: [Accurate and Efficient Stereo Matching
   <p align="center">
     Gangwei Xu, Yun Wang, Junda Cheng, Jinhui Tang, Xin Yang
   </p>
-  <h3 align="center"><a href="https://arxiv.org/abs/2211.05783">Paper</a> | <a href="https://haofeixu.github.io/unimatch/">Project Page</a> | <a href="https://colab.research.google.com/drive/1r5m-xVy3Kw60U-m5VB-aQ98oqqg_6cab?usp=sharing">Colab</a> | <a href="https://huggingface.co/spaces/haofeixu/unimatch">Demo</a> </h3>
+  <h3 align="center"><a href="https://arxiv.org/pdf/2209.12699.pdf">Paper</a>
   <div align="center"></div>
 </p>
 <p align="center">
   <a href="">
-    <img src="https://haofeixu.github.io/unimatch/resources/teaser.svg" alt="Logo" width="70%">
+    <img src="[https://haofeixu.github.io/unimatch/resources/teaser.svg](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png)" alt="Logo" width="70%">
   </a>
 </p>
 
