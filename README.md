@@ -11,8 +11,12 @@ This is the implementation of the paper: [Accurate and Efficient Stereo Matching
 </p>
 <p align="center">
   <a href="">
-    <img src="https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png" alt="Logo" width="70%">
+    <img src="https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png" alt="Logo" width="100%">
   </a>
+</p>
+
+<p align="center">
+Fast-ACVNet.
 </p>
 
 # Demo on KITTI raw data
@@ -23,11 +27,6 @@ A demo result on our RTX 3090 (Ubuntu 20.04).
   <img width="844" height="446" src="./demo/kittiraw_demo.gif" data-zoomable>
 </p>
 
-# Introduction
-
-We design a fast version of ACV to enable real-time performance, named Fast-ACV,  which generates high likelihood disparity hypotheses and the  corresponding attention weights from low-resolution correlation clues to significantly reduce computational and memory cost and meanwhile maintain a satisfactory accuracy. The core idea of our Fast-ACV is volume attention propagation (VAP) which can automatically select accurate correlation values from an upsampled correlation volume and propagate these accurate values to the surroundings pixels with ambiguous correlation clues. In addition, we propose a “Fine-to-Important” sampling strategy which generates a set of disparity hypotheses with high likelihood and the corresponding attention weights to significantly suppress impossible disparities in the concatenation volume and in turn reduce time and memory cost.
-
-![image](https://github.com/gangweiX/Fast-ACVNet/blob/main/imgs/Fast-ACV.png)
 
 # How to use
 
