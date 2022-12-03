@@ -105,11 +105,10 @@ Our Fast-ACVNet+ achieves comparable accuracy with HITNet on KITTI 2012 and KITT
 If you find this project helpful in your research, welcome to cite the paper.
 
 ```
-@inproceedings{xu2022attention,
-  title={Attention Concatenation Volume for Accurate and Efficient Stereo Matching},
-  author={Xu, Gangwei and Cheng, Junda and Guo, Peng and Yang, Xin},
-  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  pages={12981--12990},
+@article{xu2022accurate,
+  title={Accurate and Efficient Stereo Matching via Attention Concatenation Volume},
+  author={Xu, Gangwei and Wang, Yun and Cheng, Junda and Tang, Jinhui and Yang, Xin},
+  journal={arXiv preprint arXiv:2209.12699},
   year={2022}
 }
 
@@ -117,4 +116,4 @@ If you find this project helpful in your research, welcome to cite the paper.
 
 # Acknowledgements
 
-Thanks to Xiaoyang Guo for opening source of his excellent work GwcNet. Our work is inspired by this work and part of codes are migrated from [GwcNet](https://github.com/xy-guo/GwcNet).
+Thanks to Antyanta Bangunharcana for opening source of his excellent work [Correlate-and-Excite](https://github.com/antabangun/coex). Thanks to Xiaoyang Guo for opening source of his excellent work [GwcNet](https://github.com/xy-guo/GwcNet).
