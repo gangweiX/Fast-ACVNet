@@ -55,13 +55,7 @@ Secondly, train complete network for another 24 epochs,
 ```
 python main_sceneflow.py
 ```
-Use the following command to train Fast-ACVNet+ or Fast-ACVNet on KITTI,
-```
-python main_kitti.py
-```
-
-
-Use the following command to train ACVNet on KITTI (using pretrained model on Scene Flow)
+Use the following command to train Fast-ACVNet+ or Fast-ACVNet on KITTI (using pretrained model on Scene Flow),
 ```
 python main_kitti.py
 ```
