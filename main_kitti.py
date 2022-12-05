@@ -157,17 +157,17 @@ def train_sample(sample, compute_metrics=False):
     mask_low = (disp_gt_low < args.maxdisp) & (disp_gt_low > 0)
     masks = [mask, mask_low, mask, mask_low]
     disp_gts = [disp_gt, disp_gt_low, disp_gt, disp_gt_low] 
-    loss = model_loss_train(disp_ests, disp_gts, masks, disp_gt_low, mask_low)
+    loss = model_loss_train(disp_ests, disp_gts, masks)
     scalar_outputs = {"loss": loss}
-    image_outputs = {"disp_est": disp_ests['disparity'], "disp_gt": disp_gt, "imgL": imgL, "imgR": imgR}
+    image_outputs = {"disp_est": disp_ests, "disp_gt": disp_gt, "imgL": imgL, "imgR": imgR}
     if compute_metrics:
         with torch.no_grad():
-            image_outputs["errormap"] = [disp_error_image_func.apply(disp_est, disp_gt) for disp_est in [disp_ests['disparity'][0]]]
-            scalar_outputs["EPE"] = [EPE_metric(disp_est, disp_gt, mask) for disp_est in [disp_ests['disparity'][0]]]
-            scalar_outputs["D1"] = [D1_metric(disp_est, disp_gt, mask) for disp_est in [disp_ests['disparity'][0]]]
-            scalar_outputs["Thres1"] = [Thres_metric(disp_est, disp_gt, mask, 1.0) for disp_est in [disp_ests['disparity'][0]]]
-            scalar_outputs["Thres2"] = [Thres_metric(disp_est, disp_gt, mask, 2.0) for disp_est in [disp_ests['disparity'][0]]]
-            scalar_outputs["Thres3"] = [Thres_metric(disp_est, disp_gt, mask, 3.0) for disp_est in [disp_ests['disparity'][0]]]
+            image_outputs["errormap"] = [disp_error_image_func.apply(disp_ests[0], disp_gt)]
+            scalar_outputs["EPE"] = [EPE_metric(disp_ests[0], disp_gt, mask)]
+            scalar_outputs["D1"] = [D1_metric(disp_ests[0], disp_gt, mask)]
+            scalar_outputs["Thres1"] = [Thres_metric(disp_ests[0], disp_gt, mask, 1.0)]
+            scalar_outputs["Thres2"] = [Thres_metric(disp_ests[0], disp_gt, mask, 2.0)]
+            scalar_outputs["Thres3"] = [Thres_metric(disp_ests[0], disp_gt, mask, 3.0)]
     loss.backward()
     optimizer.step()
 
