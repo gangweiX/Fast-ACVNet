@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">Accurate and Efficient Stereo Matching via Attention Concatenation Volume</h2>
+  <h1 align="center">Accurate and Efficient Stereo Matching via Attention Concatenation Volume</h1>
   <p align="center">
     Gangwei Xu, Yun Wang, Junda Cheng, Jinhui Tang, Xin Yang
   </p>
