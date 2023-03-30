@@ -59,15 +59,15 @@ Use the following command to train Fast-ACVNet+ or Fast-ACVNet on Scene Flow
 
 Firstly, train attention weights generation network for 24 epochs,
 ```
-python main_sceneflow.py --attention_weights_only True
+python main_sceneflow.py --attention_weights_only True --logdir ./checkpoints/sceneflow/attention
 ```
 Secondly, train complete network for another 24 epochs,
 ```
-python main_sceneflow.py
+python main_sceneflow.py --loadckpt ./checkpoints/sceneflow/attention/checkpoint_000023.ckpt --logdir ./checkpoints/sceneflow/complete
 ```
 Use the following command to train Fast-ACVNet+ or Fast-ACVNet on KITTI (using pretrained model on Scene Flow),
 ```
-python main_kitti.py
+python main_kitti.py --loadckpt ./checkpoints/sceneflow/complete/checkpoint_000023.ckpt --logdir ./checkpoints/kitti
 ```
 
 ## Submitted to KITTI benchmarks
