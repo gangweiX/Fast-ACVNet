@@ -3,6 +3,7 @@
   <p align="center">
     Gangwei Xu, Yun Wang, Junda Cheng, Jinhui Tang, Xin Yang
   </p>
+  <h3 align="center">TPAMI 2023</h3>
   <h3 align="center"><a href="https://arxiv.org/pdf/2209.12699.pdf">Paper</a>
   <div align="center"></div>
 </p>
@@ -114,8 +115,9 @@ If you find this project helpful in your research, welcome to cite the paper.
 @article{xu2022accurate,
   title={Accurate and Efficient Stereo Matching via Attention Concatenation Volume},
   author={Xu, Gangwei and Wang, Yun and Cheng, Junda and Tang, Jinhui and Yang, Xin},
-  journal={arXiv preprint arXiv:2209.12699},
-  year={2022}
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2023},
+  publisher={IEEE}
 }
 
 ```
