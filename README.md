@@ -120,6 +120,14 @@ If you find this project helpful in your research, welcome to cite the paper.
   publisher={IEEE}
 }
 
+@inproceedings{xu2022attention,
+  title={Attention Concatenation Volume for Accurate and Efficient Stereo Matching},
+  author={Xu, Gangwei and Cheng, Junda and Guo, Peng and Yang, Xin},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={12981--12990},
+  year={2022}
+}
+
 ```
 
 # Acknowledgements
