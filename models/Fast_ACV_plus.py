@@ -297,7 +297,7 @@ class Fast_ACVNet_plus(nn.Module):
         spx_pred = F.softmax(spx_pred, 1)
 
         if self.training:
-            prob = att_weights_prob.squeeze(1)
+            # prob = att_weights_prob.squeeze(1)
             att_prob = torch.gather(att_weights, 2, ind_k).squeeze(1)
             att_prob = F.softmax(att_prob, dim=1)
             pred_att = torch.sum(att_prob*disparity_sample_topk, dim=1)
