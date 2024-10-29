@@ -16,7 +16,6 @@ class SceneFlowDatset(Dataset):
         self.datapath = datapath
         self.left_filenames, self.right_filenames, self.disp_filenames = self.load_path(list_filename)
         self.training = training
-        #print('####path',self.left_filenames,self.right_filenames)
 
     def load_path(self, list_filename):
         lines = read_all_lines(list_filename)
@@ -38,22 +37,14 @@ class SceneFlowDatset(Dataset):
         return len(self.left_filenames)
 
     def __getitem__(self, index):
-        # print(os.path.join(self.datapath, self.left_filenames[index]))
         left_img = self.load_image(os.path.join(self.datapath, self.left_filenames[index]))
         right_img = self.load_image(os.path.join(self.datapath, self.right_filenames[index]))
         disparity = self.load_disp(os.path.join(self.datapath, self.disp_filenames[index]))
         left_img_np = np.array(left_img)
-        # print(left_img_np.shape)
-        # plt.subplot(121)
-        # plt.imshow(disparity_front)
-        # plt.show()
         dx_imgL = cv2.Sobel(left_img_np,cv2.CV_32F,1,0,ksize=3)
         dy_imgL = cv2.Sobel(left_img_np,cv2.CV_32F,0,1,ksize=3)
         dxy_imgL=np.sqrt(np.sum(np.square(dx_imgL),axis=-1)+np.sum(np.square(dy_imgL),axis=-1))
         dxy_imgL = dxy_imgL/(np.max(dxy_imgL)+1e-5)
-        #print('####11111', dxy_imgL.shape)
-        # mask_edge = (dxy_imgL > np.percentile(dxy_imgL,80))
-        # print(mask_img.shape, disparity.shape)
 
         if self.training:
             w, h = left_img.size
@@ -68,18 +59,13 @@ class SceneFlowDatset(Dataset):
             disparity = disparity[y1:y1 + crop_h, x1:x1 + crop_w]
             disparity_low = cv2.resize(disparity, (crop_w//4, crop_h//4), interpolation=cv2.INTER_NEAREST)
             disparity_low_r8 = cv2.resize(disparity, (crop_w//8, crop_h//8), interpolation=cv2.INTER_NEAREST)
-            # mask_edge = mask_edge[y1:y1 + crop_h, x1:x1 + crop_w]
-            # mask_smooth = ~mask_edge
             gradient_map = dxy_imgL[y1:y1 + crop_h, x1:x1 + crop_w]
 
             # to tensor, normalize
             processed = get_transform()
             left_img = processed(left_img)
             right_img = processed(right_img)
-            # mask_edge = torch.from_numpy(np.array(mask_edge, dtype=np.uint8))
-            # mask_smooth = torch.from_numpy(np.array(mask_smooth, dtype=np.uint8))
             gradient_map = torch.from_numpy(gradient_map)
-            #print('###2222', gradient_map.shape, gradient_map)
 
             return {"left": left_img,
                     "right": right_img,
@@ -96,14 +82,10 @@ class SceneFlowDatset(Dataset):
             disparity = disparity[h - crop_h:h, w - crop_w: w]
             gradient_map = dxy_imgL[h - crop_h:h, w - crop_w: w]
             disparity_low = cv2.resize(disparity, (crop_w//4, crop_h//4), interpolation=cv2.INTER_NEAREST)
-            # mask_edge = mask_edge[h - crop_h:h, w - crop_w: w]
-            # mask_smooth = ~mask_edge
 
             processed = get_transform()
             left_img = processed(left_img)
             right_img = processed(right_img)
-            # mask_edge = torch.from_numpy(np.array(mask_edge, dtype=np.uint8))
-            # mask_smooth = torch.from_numpy(np.array(mask_smooth, dtype=np.uint8))
 
             return {"left": left_img,
                     "right": right_img,
