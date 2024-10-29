@@ -31,14 +31,6 @@ class SceneFlowDatset(Dataset):
         data = np.ascontiguousarray(data, dtype=np.float32)
         return data
 
-    # def RGB2GRAY(self, img):
-    #     imgG = copy.deepcopy(img)
-    #     img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-    #     imgG[:, :, 0] = img
-    #     imgG[:, :, 1] = img
-    #     imgG[:, :, 2] = img
-    #     return imgG
-
     def __len__(self):
         return len(self.left_filenames)
 
@@ -46,8 +38,6 @@ class SceneFlowDatset(Dataset):
         left_img = self.load_image(os.path.join(self.datapath, self.left_filenames[index]))
         right_img = self.load_image(os.path.join(self.datapath, self.right_filenames[index]))
         disparity = self.load_disp(os.path.join(self.datapath, self.disp_filenames[index]))
-        # left_img = self.RGB2GRAY(left_img)
-        # right_img = self.RGB2GRAY(right_img)
 
         if self.training:
 
@@ -70,18 +60,6 @@ class SceneFlowDatset(Dataset):
             left_img = np.array(left_img)
             right_img = np.array(right_img)
 
-            # w, h  = left_img.size
-            # th, tw = 256, 512
-            #
-            # x1 = random.randint(0, w - tw)
-            # y1 = random.randint(0, h - th)
-            #
-            # left_img = left_img.crop((x1, y1, x1 + tw, y1 + th))
-            # right_img = right_img.crop((x1, y1, x1 + tw, y1 + th))
-            # dataL = dataL[y1:y1 + th, x1:x1 + tw]
-            # right_img = np.asarray(right_img)
-            # left_img = np.asarray(left_img)
-
             # geometric unsymmetric-augmentation
             angle = 0;
             px = 0
@@ -91,8 +69,6 @@ class SceneFlowDatset(Dataset):
                 angle = 0.05
                 px = 1
             co_transform = flow_transforms.Compose([
-                # flow_transforms.RandomVdisp(angle, px),
-                # flow_transforms.Scale(np.random.uniform(self.rand_scale[0], self.rand_scale[1]), order=self.order),
                 flow_transforms.RandomCrop((th, tw)),
             ])
             augmented, disparity = co_transform([left_img, right_img], disparity)
